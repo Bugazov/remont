@@ -19,12 +19,15 @@ export const Login = () => {
       </div>
       <div className={cls.form}>
         <LoginForm setIsOpen={setIsAuthModal} />
-        <Modal isOpen={IsAuthModal} onClose={onCloseModal} lazy>
-          <Suspense fallback={<Loader />}>
-            <LoginForgot />
-          </Suspense>
-        </Modal>
       </div>
-    </div>
+      
+      {IsAuthModal &&(
+        <Modal isOpen={IsAuthModal} onClose={onCloseModal} lazy>
+        <Suspense fallback={<Loader />}>
+          <LoginForgot />
+        </Suspense>
+      </Modal>
+      )}
+      </div>
   );
 };

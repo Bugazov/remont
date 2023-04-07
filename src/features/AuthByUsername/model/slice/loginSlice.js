@@ -1,19 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { loginByUsername } from '../services/loginByUsername/loginByUsername';
+import { useNavigate } from 'react-router-dom';
 
 const initialState = {
     isLoading: false,
-    username: '',
+    login: '',
     password: '',
     error:undefined
 };
+
 
 export const loginSlice = createSlice({
     name: 'login',
     initialState,
     reducers: {
-        setUsername: (state, action) => {
-            state.username = action.payload;
+        setLogin: (state, action) => {
+            state.login = action.payload;
         },
         setPassword: (state, action) => {
             state.password = action.payload;
@@ -27,6 +29,7 @@ export const loginSlice = createSlice({
             })
             .addCase(loginByUsername.fulfilled, (state) => {
                 state.isLoading = false;
+                
             })
             .addCase(loginByUsername.rejected, (state, action) => {
                 state.isLoading = false;

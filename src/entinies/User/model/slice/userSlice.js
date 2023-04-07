@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 
 const initialState = {
-    
+    authData:undefined,
+    _inited:false
 }
 
 export const userSlice = createSlice({

@@ -1,7 +1,7 @@
 export {
-    getUserAuthData,
+ getUserAuthData,
 } from './model/selectors/getUserAuthData/getUserAuthData';
-
+export { getInited } from "./model/selectors/getInited/getInited"
 
 export {
     userReducer,

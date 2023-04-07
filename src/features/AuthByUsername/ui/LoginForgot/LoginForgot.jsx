@@ -26,7 +26,9 @@ const LoginForm = ({setIsOpen}) => {
 
       num = num.trim();
 
-      setLogin(`+ ${num}`);
+      if(num.length < 15){
+        setLogin(`+ 7 ${num}`);
+      }
     },
     [login]
   );

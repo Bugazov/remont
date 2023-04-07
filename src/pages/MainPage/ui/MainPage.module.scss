@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        font-size: 25px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: orange;
+    }
+}

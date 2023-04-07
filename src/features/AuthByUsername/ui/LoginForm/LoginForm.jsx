@@ -53,6 +53,7 @@ const LoginForm = ({setIsOpen}) => {
       <div className={cls.inputs}>
         <Input label="Введите логин" value={login} onChange={onChangeLogin} />
         <Input
+        type="password"
           label="Введите пароль"
           value={password}
           onChange={onChangePassword}

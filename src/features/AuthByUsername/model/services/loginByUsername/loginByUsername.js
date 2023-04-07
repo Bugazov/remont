@@ -8,7 +8,7 @@ import { USER_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 export const loginByUsername = createAsyncThunk(
     'login/loginByUsername',
     async ({login,password}, thunkApi) => {
-        const {dispatch, rejectWithValue } = thunkApi;
+        const {extra,dispatch, rejectWithValue } = thunkApi;
 
         try {
             const response = await axios.post('http://localhost:8000/login', {login,password});
@@ -20,6 +20,7 @@ export const loginByUsername = createAsyncThunk(
 
             localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
             dispatch(userActions.setAuthData(response.data));
+            extra.navigate("/")
             return response.data;
         } catch (e) {
         

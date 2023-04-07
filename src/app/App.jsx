@@ -3,10 +3,11 @@ import './App.scss';
 import { Suspense, useEffect } from 'react';
 import { AppRouter } from './providers/router';
 
-import { useDispatch } from 'react-redux';
-import { userActions } from 'entinies/User';
+import { useDispatch, useSelector } from 'react-redux';
+import { getInited, userActions } from 'entinies/User';
 
 function App() {
+  const inited = useSelector(getInited)
 
   const dispatch =useDispatch()
   useEffect(() => {
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback=''>
-      <AppRouter/>
+      {inited && <AppRouter/>}
       </Suspense>
       
     </div>
