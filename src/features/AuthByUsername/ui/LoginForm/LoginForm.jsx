@@ -62,8 +62,8 @@ const LoginForm = ({setIsOpen}) => {
           onChange={onChangePassword}
         />
       </div>
-      <div onClick={()=> setIsOpen(true)} className={cls.forgot}>
-        <span>Забыли пароль?</span>
+      <div className={cls.forgot}>
+        <span  onClick={()=> setIsOpen(true)}>Забыли пароль?</span>
       </div>
       {error && <span style={{ color: "red" }}>Неверный логин пароль</span>}
 
