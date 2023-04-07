@@ -23,7 +23,7 @@ export const Login = () => {
       
       {IsAuthModal &&(
         <Modal isOpen={IsAuthModal} onClose={onCloseModal} lazy>
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<div className={cls.loader}><Loader /></div>}>
           <LoginForgot />
         </Suspense>
       </Modal>
