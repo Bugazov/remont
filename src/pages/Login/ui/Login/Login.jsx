@@ -5,6 +5,7 @@ import { LoginForgot, LoginForm } from "features/AuthByUsername";
 import { useState } from "react";
 import { Modal } from "shared/ui/Modal/Modal";
 import { Loader } from "shared/ui/Loader/Loader";
+import { PageLoader } from "shared/ui/PageLoader/PageLoader";
 
 export const Login = () => {
   const [IsAuthModal, setIsAuthModal] = useState(false);
@@ -23,7 +24,7 @@ export const Login = () => {
       
       {IsAuthModal &&(
         <Modal isOpen={IsAuthModal} onClose={onCloseModal} lazy>
-        <Suspense fallback={<div className={cls.loader}><Loader /></div>}>
+        <Suspense fallback={<PageLoader/>}>
           <LoginForgot />
         </Suspense>
       </Modal>

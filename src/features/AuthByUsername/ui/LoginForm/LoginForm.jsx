@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginByUsername } from "../../model/services/loginByUsername/loginByUsername";
 import { getLoginError } from "../../model/selectors/getLoginError/getLoginError";
 import { getLoginIsLoading } from "features/AuthByUsername/model/selectors/getLoginIsLoading/getLoginIsLoading";
-import { Loader } from "shared/ui/Loader/Loader";
+import { PageLoader } from "shared/ui/PageLoader/PageLoader"
 
 const LoginForm = ({setIsOpen}) => {
   const [login, setLogin] = useState("");
@@ -68,7 +68,7 @@ const LoginForm = ({setIsOpen}) => {
       {error && <span style={{ color: "red" }}>Неверный логин пароль</span>}
 
       <div className={cls.btn}>
-        {isLoading ? <div className={cls.loader}><Loader/></div> : <button onClick={Auth} className={cls.loginBtn}>
+        {isLoading ? <PageLoader/> : <button onClick={Auth} className={cls.loginBtn}>
           ВОЙТИ
         </button>}
       </div>
