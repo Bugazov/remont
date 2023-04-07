@@ -1,0 +1,50 @@
+.wrapper {
+  width: 516px;
+  height: 608px;
+  box-shadow: -10px 7px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 90px 87px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forgot{
+  cursor: pointer;
+    text-align: end;
+    margin-top: 10px;
+    span{
+        font-weight: 600;
+        font-size: 16px;
+        color:  #F6B52E;
+        
+    }
+}
+
+.loginBtn{
+  cursor: pointer;
+    margin-top: 40px;
+    width: 100%;
+    border: none;
+    background-color: #F6B52E;
+    border-radius: 5px;
+    padding:9px 138px;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+}

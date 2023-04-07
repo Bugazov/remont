@@ -1,0 +1,23 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #989898;
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+    }
+    input {
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      height: 32px;
+      padding: 0 5px;
+    }
+  }
+  
+  .focus{
+  
+          color: black;
+      
+  }
